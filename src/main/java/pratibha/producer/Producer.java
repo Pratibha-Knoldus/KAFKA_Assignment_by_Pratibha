@@ -20,7 +20,7 @@ public class Producer {
             Random rand = new Random();
             for (int i = 1; i <= 100; i++) {
 
-                User user = new User(i, "Pratibha", rand.nextInt(10)+20, "MCA");
+                User user = new User(i, "Pratibha", 24, "B.Tech");
                 producer.send(new ProducerRecord<String, User>("userobj", String.valueOf(i), user));
                 System.out.println("Message " + user.toString() + " sent !!");
             }
